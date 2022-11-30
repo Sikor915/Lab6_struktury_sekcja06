@@ -4,7 +4,7 @@
 
 //TODO
 // 1. Zrobic funkcje liczaca argument podanej liczby zespolonej
-// 2. Zrobic menu wyboru (moze)
+// 2. Zrobic menu wyboru (moge zrobic to na while(true) i prosic o to co chce zrobic uzytkownik i na koncu danego if-a dac break;)
 
 #include <iostream>
 #include <string>
