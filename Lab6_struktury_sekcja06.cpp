@@ -1,7 +1,3 @@
-// Lab6_struktury_sekcja06.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-
 //TODO
 // 1. Zrobic funkcje liczaca argument podanej liczby zespolonej -- DONE
 // 2. Zrobic menu wyboru (moge zrobic to na while(true) i prosic o to co chce zrobic uzytkownik i na koncu danego if-a dac break;) -- DONE
@@ -17,15 +13,15 @@
 
 struct Lzespolona
 {
-    int Re;
-    int Im;
-    int liczba;
+    float Re;
+    float Im;
+    float liczba;
 };
 
 void wypelnij(Lzespolona tzespolone[], int rozmiar)
 {
-    int lzespolonaRe;
-    int lzespolonaIm;
+    float lzespolonaRe;
+    float lzespolonaIm;
 
     for (int i = 0; i < rozmiar; i++)
     {
@@ -45,8 +41,8 @@ void wczytaj(Lzespolona tzespolone[], int rozmiar)
     {
         std::cout << "Podaj czesc rzeczywista i urojona liczby zespolonej" << std::endl << std::endl;
 
-        int lzespolonaRe;
-        int lzespolonaIm;
+        float lzespolonaRe;
+        float lzespolonaIm;
 
         std::cin >> lzespolonaRe;
         std::cin >> lzespolonaIm;
@@ -214,13 +210,3 @@ int main()
     }
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
