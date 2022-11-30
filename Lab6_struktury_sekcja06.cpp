@@ -91,9 +91,14 @@ int main()
     {
         wypelnij(tab, n);
     }
-    else
+    else if (czyLosowane == "wpis")
     {
         wczytaj(tab, n);
+    }
+    else
+    {
+        std::cout << "We no sluchaj co sie do ciebie mowi, nie ma liczb zespolonych" << std::endl;
+        return 0;
     }
     
 
