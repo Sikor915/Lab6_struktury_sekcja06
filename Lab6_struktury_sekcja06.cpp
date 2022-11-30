@@ -22,13 +22,25 @@ void wypelnij(Lzespolona tzespolone[], int rozmiar)
 {
     float lzespolonaRe;
     float lzespolonaIm;
+    int losRe, losIm;
 
     for (int i = 0; i < rozmiar; i++)
     {
         lzespolonaRe = rand() % 100 + 1;
         lzespolonaIm = rand() % 100 + 1;
-        
+        losRe = rand() % 10 + 1;
+        losIm = rand() % 10 + 1;
+
         Lzespolona zesp;
+
+        if (losRe <= 5)
+        {
+            lzespolonaRe *= -1;
+        }
+        if (losIm <= 5)
+        {
+            lzespolonaIm *= -1;
+        }
         zesp.Re = lzespolonaRe;
         zesp.Im = lzespolonaIm;
 
@@ -92,46 +104,16 @@ int main()
     int liczba, pozycja1, pozycja2;
     bool hasGenerated{false};
 
-    std::cout << "Czy chcesz uzyskac nowy zbior liczb zespolonych?" << std::endl;
-    std::cout << "T/N" << std::endl;
-    std::cin >> wybor;
-    std::cout << std::endl;
 
-    if (wybor == "T" or wybor == "t")
-    {
-        std::cout << "Chcesz wylosowac czy wpisac do tablicy recznie?" << std::endl;
-        std::cout << "losuj/wpisz" << std::endl;
-        std::cin >> wybor;
-
-        if (wybor == "losuj")
-        {
-            wypelnij(tab, n);
-            wydrukuj(tab, n);
-            hasGenerated = true;
-        }
-        else if (wybor == "wpisz")
-        {
-            wczytaj(tab, n);
-            wydrukuj(tab, n);
-            hasGenerated = true;
-        }
-        else
-        {
-            std::cout << "We no sluchaj co sie do ciebie mowi, nie ma liczb zespolonych" << std::endl;
-        }
-    }
-
-    while (wyborZ == "T" or wyborZ == "t")
+    while (wyborZ == "T" || wyborZ == "t")
     {
 
-        if (hasGenerated == false)
-        {
             std::cout << "Czy chcesz uzyskac nowy zbior liczb zespolonych?" << std::endl;
             std::cout << "T/N" << std::endl;
             std::cin >> wybor;
             std::cout << std::endl;
 
-            if (wybor == "T" or wybor == "t")
+            if (wybor == "T" || wybor == "t")
             {
                 std::cout << "Chcesz wylosowac czy wpisac do tablicy recznie?" << std::endl;
                 std::cout << "losuj/wpisz" << std::endl;
@@ -153,9 +135,9 @@ int main()
                 else
                 {
                     std::cout << "We no sluchaj co sie do ciebie mowi, nie ma liczb zespolonych" << std::endl;
+                    break;
                 }
             }
-        }
 
         if (hasGenerated == true)
         {
@@ -205,7 +187,6 @@ int main()
         std::cout << std::endl << "Czy chcesz kontynuowac i wykonac inna operacje?" << std::endl;
         std::cout << "T/N" << std::endl;
         std::cin >> wyborZ;
-        hasGenerated = false;
         
     }
 }
