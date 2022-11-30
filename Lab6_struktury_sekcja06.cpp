@@ -1,6 +1,11 @@
 // Lab6_struktury_sekcja06.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+
+//TODO
+// 1. Zrobic funkcje liczaca argument podanej liczby zespolonej
+// 2. Zrobic menu wyboru (moze)
+
 #include <iostream>
 #include <string>
 #include <time.h>
